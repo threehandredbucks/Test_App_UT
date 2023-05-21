@@ -1,0 +1,26 @@
+﻿<Window x:Class="Test_App_UT.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Test_App_UT"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="TextBox1" HorizontalAlignment="Left" Height="142" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="602"/>
+        <ComboBox x:Name="CountryList" Margin="636,53,0,0" VerticalAlignment="Top" Height="21" Text="Выбор города" HorizontalAlignment="Left" Width="120" >
+            <Label Content="Москва" />
+            <Label Content="Лондон"  />
+            <Label Content="Казань" />
+            <Label Content="Каир" />
+            <Label Content="Стамбул" />
+            <Label Content="Токио" />
+        </ComboBox>
+        <Button Content="Подтвердить" HorizontalAlignment="Left" Margin="636,278,0,0" VerticalAlignment="Top" Width="120" Height="21" Click="Button_Click_1"/>
+        <GroupBox Header="   Погода&#xD;&#xA;" HorizontalAlignment="Left" Height="214" Margin="10,180,0,0" VerticalAlignment="Top" Width="602"/>
+        <Label x:Name="Temp" Content="Label" HorizontalAlignment="Left" Margin="150,224,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="WindSpeed" Content="Label" HorizontalAlignment="Left" Margin="150,296,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Description" Content="Label" HorizontalAlignment="Left" Margin="150,260,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
