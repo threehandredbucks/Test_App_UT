@@ -1,0 +1,40 @@
+1) Select * From Managers Where Phone IS NOT NULL
+2) Select * From Sells Where DATE(Date) = "2021-06-20"
+3) Select AVG(Sum) From Sells 
+Where ID_Prod IN (
+Select ID From Products Where Name = "Фанера"
+ )
+4) Select Managers.Fio, Sells.Sum From Managers, Sells
+ Where ID_Prod IN(
+Select ID From Products Where Name = "ОСБ"
+) and
+ID_Manag =(
+Select ID From Managers)
+5) Select * From Managers, Products 
+Where Managers.ID IN (
+Select ID_Manag From Sells Where DATE(Date) = "2021-08-22") 
+AND
+Products.ID IN (
+Selects ID_Prod From Sells Where DATE(Date) = "2021-08-22")
+6) Select * From Products 
+Where Name LIKE '%Фанера%'
+And
+Where Cost > 1750
+7) Select Product.Name, Product.Cost, Sells.Date From Products, Sells
+Where Product.ID IN (
+Select ID_Prod From Sells )
+GROUP BY Product.Name, Sells.Date
+8) SELECT Name, COUNT(*) AS Rep_CNT
+   FROM Sells
+   GROUP BY Name
+   HAVING COUNT(*) > 1
+UNION
+    SELECT Cost,COUNT(*) AS Rep_CNT
+   FROM Sells
+   GROUP BY Cost
+   HAVING COUNT(*) > 1
+UNION
+   SELECT Volume,COUNT(*) AS Rep_CNT
+   FROM Sells
+   GROUP BY Volume
+   HAVING COUNT(*) > 1
