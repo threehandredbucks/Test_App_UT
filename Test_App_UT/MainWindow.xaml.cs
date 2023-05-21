@@ -93,9 +93,9 @@ namespace Test_App_UT
                 speed = s3;
              }
 
-            Temp.Content = "Температура = " + temp;
+            Temp.Content = "Температура = " + temp +" C";
             Description.Content = "Погода = " + description;
-            WindSpeed.Content = "Скорость ветра = " + speed;
+            WindSpeed.Content = "Скорость ветра = " + speed + " km/h";
 
 
             if (response == null) // Проверка на пустоту
